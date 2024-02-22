@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #ddd;
+            text-align: center;
+            margin: 50px;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .gallery {
+            width: 80%;
+            margin: 20px auto;
+            border: 10px solid white;
+            list-style: none;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0,.3);
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+        }
+    </style>
+    <title>Responsive Image Gallery</title>
+</head>
+
+<body>
+    <h2>Image Gallery</h2>
+    <ul class="gallery">
+        <li><img src="p1.jpg" alt=""></li>
+        <li><img src="p2.jpg" alt=""></li>
+        <li><img src="p3.jpg" alt=""></li>
+        <li><img src="p4.jpg" alt=""></li>
+        <li><img src="p5.jpg" alt=""></li>
+        <li><img src="p6.jpg" alt=""></li>
+        <li><img src="p7.jpg" alt=""></li>
+        <li><img src="p8.jpg" alt=""></li>
+    </ul>
+</body>
+
+</html>
