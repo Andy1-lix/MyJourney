@@ -9,9 +9,10 @@
 
 .card {
     transition: transform 0.3s ease;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     margin: 10px;
+    background-color: #ACE2E1;
 }
 
 .card:hover {
