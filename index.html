@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link " aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#About">About Me</a>
@@ -334,6 +334,26 @@
                 })
                 .catch(error => console.error('Error!', error.message))
         })
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Menangkap semua elemen nav-link
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Memberikan event click pada setiap nav-link
+            navLinks.forEach(function (navLink) {
+                navLink.addEventListener('click', function () {
+                    // Menghapus kelas 'active' dari semua nav-link
+                    navLinks.forEach(function (link) {
+                        link.classList.remove('active');
+                    });
+                    // Menambahkan kelas 'active' ke nav-link yang ditekan
+                    navLink.classList.add('active');
+                });
+            });
+        });
+
     </script>
 
 </body>
