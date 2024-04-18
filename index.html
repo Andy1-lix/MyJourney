@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -23,13 +24,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link " aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#About">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Gallery">Gallery</a>
+                        <a class="nav-link" href="#Gallery">Certificated</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#Contact">Contact Me</a>
@@ -42,8 +43,9 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-        <img src="img/1.jpg" alt="Fadhil" width="200" class="rounded-circle img-thumbnail">
-        <h1 class="display-4">Andi Muhammad Fadhil Baso</h1>
+        <img src="img/1.jpg" alt="Fadhil" width="200" class="rounded-circle img-thumbnail " data-aos="flip-left"
+            data-aos-duration="1000">
+        <h1 class="display-4"></h1>
         <p class="lead">Fresh Graduate informatics <br>student at Politeknik Negeri Malang | Web Developer</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#fff" fill-opacity="1"
@@ -88,13 +90,13 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center mb-3">
-                    <h2>My Gallery</h2>
+                    <h2>My Certification</h2>
                 </div>
             </div>
-            <div class="row  justify-content-center ">
+            <div class="row  justify-content-center " data-aos="fade-up">
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="img/Gallery/01.png" class="card-img-top" alt="First">
+                        <img src="img/Gallery/01.png" class="card-img-top" alt="First" loading="lazy">
                         <div class="card-body">
                             <p class="card-text">Belajar Dasar Pemrograman Javascript</p>
                         </div>
@@ -106,7 +108,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="img/Gallery/02.png" class="card-img-top" alt="Second">
+                        <img src="img/Gallery/02.png" class="card-img-top" alt="Second" loading="lazy">
                         <div class="card-body">
                             <p class="card-text">Belajar Dasar Pemrograman Web</p>
                         </div>
@@ -118,7 +120,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="img/Gallery/03.png" class="card-img-top" alt="Third">
+                        <img src="img/Gallery/03.png" class="card-img-top" alt="Third" loading="lazy">
                         <div class="card-body">
                             <p class="card-text">Memulai Dasar Menjadi Pengembang Software</p>
                         </div>
@@ -130,7 +132,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="img/Gallery/04.png" class="card-img-top" alt="Fourth">
+                        <img src="img/Gallery/04.png" class="card-img-top" alt="Fourth" loading="lazy">
                         <div class="card-body">
                             <p class="card-text">Belajar Membuat Front-End Web Untuk Pemula</p>
                         </div>
@@ -142,13 +144,13 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="img/Gallery/05.png" class="card-img-top" alt="fifth">
+                        <img src="img/Gallery/05.png" class="card-img-top" alt="fifth" loading="lazy">
                         <div class="card-body">
                             <p class="card-text">Belajar Dasar Structured Query Language (SQL)</p>
                         </div>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#exampleModal05">
-                            Click   
+                            Click
                         </button>
                     </div>
                 </div>
@@ -172,20 +174,31 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-7">
-                    <form>
+                    <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                        <strong>Terima Kasih!!</strong> Pesan anda telah kami terima.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <form name="submit-to-google-sheet">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name">
+                            <label for="nama" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="nama" name="nama" aria-describedby="nama"
+                                required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email">
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="email"
+                                required>
                         </div>
                         <div class="mb-3">
                             <label for="pesan" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="pesan" rows="3"></textarea>
+                            <textarea class="form-control" id="pesan" rows="3" name="pesan" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Kirim</button>
+                        <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+
+                        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                            <span role="status">Loading...</span>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -195,7 +208,6 @@
                 d="M0,96L48,112C96,128,192,160,288,181.3C384,203,480,213,576,197.3C672,181,768,139,864,106.7C960,75,1056,53,1152,53.3C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
             </path>
         </svg>
-
     </section>
     <!-- /Contact -->
 
@@ -207,88 +219,170 @@
     <!-- /Footer -->
 
     <!-- Modal -->
-    <!-- 01 -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/Gallery/01.png" class="card-img-top" alt="First">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /01 -->
-    <!-- 02 -->
-    <div class="modal fade" id="exampleModal02" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/Gallery/02.png" class="card-img-top" alt="Second">
+    <section id="modal">
+        <!-- 01 -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/Gallery/01.png" class="card-img-top" alt="First">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- 02 -->
+        <!-- /01 -->
+        <!-- 02 -->
+        <div class="modal fade" id="exampleModal02" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/Gallery/02.png" class="card-img-top" alt="Second">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 02 -->
 
-    <!-- 03 -->
-    <div class="modal fade" id="exampleModal03" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/Gallery/03.png" class="card-img-top" alt="Third">
+        <!-- 03 -->
+        <div class="modal fade" id="exampleModal03" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/Gallery/03.png" class="card-img-top" alt="Third">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /03 -->
+        <!-- /03 -->
 
-    <!-- 04 -->
-    <div class="modal fade" id="exampleModal04" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/Gallery/04.png" class="card-img-top" alt="Fourth">
+        <!-- 04 -->
+        <div class="modal fade" id="exampleModal04" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/Gallery/04.png" class="card-img-top" alt="Fourth">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /04 -->
+        <!-- /04 -->
 
-    <!-- 05 -->
-    <div class="modal fade" id="exampleModal05" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/Gallery/05.png" class="card-img-top" alt="First">
+        <!-- 05 -->
+        <div class="modal fade" id="exampleModal05" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/Gallery/05.png" class="card-img-top" alt="First">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /05 -->
+        <!-- /05 -->
+    </section>
     <!-- /Modal -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // use a script tag or an external JS file
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(TextPlugin)
+            gsap.to("h1", { duration: 4, text: "Andi Muhammad Fadhil Baso" })
+            // gsap.from(".lead", { duration: 5, text: "" })
+        });
+
+        // ScrollSmoother.create({
+        //     smooth: 1,
+        //     onUpdate: (self) => console.log("progress", self.progress),
+        // });
+
+    </script>
+
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwnVkyveys8W_sLJh7pwcI0y2Zz_EHjaPLx3hD4ThYnmWy0lWM3lVHuykdHtoq-iBAC/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const kirim = document.querySelector('.btn-kirim')
+        const loading = document.querySelector('.btn-loading')
+        const alert = document.querySelector('.my-alert')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            // Ketika tombol submit di click
+            // tampilkan loading, hilangkan kirim
+            loading.classList.toggle('d-none');
+            kirim.classList.toggle('d-none');
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    // tampilkan tombol kirim, hilangkan tombol loading
+                    loading.classList.toggle('d-none');
+                    kirim.classList.toggle('d-none');
+                    // Tampilkan alert
+                    alert.classList.toggle('d-none');
+                    // reset form
+                    form.reset();
+                    console.log('Success!', response)
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Menangkap semua elemen nav-link
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Memberikan event click pada setiap nav-link
+            navLinks.forEach(function (navLink) {
+                navLink.addEventListener('click', function () {
+                    // Menghapus kelas 'active' dari semua nav-link
+                    navLinks.forEach(function (link) {
+                        link.classList.remove('active');
+                    });
+                    // Menambahkan kelas 'active' ke nav-link yang ditekan
+                    navLink.classList.add('active');
+                });
+            });
+        });
+
+    </script>
+
 </body>
 
 </html>
